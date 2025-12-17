@@ -63,6 +63,10 @@ jobs:
             target/spotbugs*.xml
           if-no-files-found: warn
 
+      - name: Make mvnw executable
+        run: |
+          if [ -f ./mvnw ]; then chmod +x ./mvnw; fi
+
       - name: Setup Node (Snyk CLI)
         uses: actions/setup-node@v4
         with:
@@ -75,8 +79,8 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
-          snyk test --severity-threshold=high --json-file-output=snyk.json || true
-          snyk test --severity-threshold=high --sarif-file-output=snyk.sarif || true
+          snyk test --file=pom.xml --severity-threshold=high --json-file-output=snyk.json || true
+          snyk test --file=pom.xml --severity-threshold=high --sarif-file-output=snyk.sarif || true
 
       - name: Upload Snyk reports
         if: always()
