@@ -178,18 +178,18 @@ protected void doFilterInternal(HttpServletRequest request, HttpServletResponse 
 В проекте настроен CI/CD пайплайн GitHub Actions, который автоматически выполняет сборку, тестирование и проверку безопасности кода и зависимостей при каждом push/pull request.
 
 * Последний успешный запуск: https://github.com/FergieDoigrales/security-lb1/actions/runs/20290542657
+  
+Проверка SpotBugs:  
+![Отчет spotBugs](screenshots/spotbugs.jpg)  
 
-Проверка SpotBugs:
-![Отчет spotBugs](screenshots/spotbugs.jpg)
+Проверка Snyk:  
+![Отчет snyk](screenshots/snyk_wf.jpg)  
 
-Проверка Snyk:
-![Отчет snyk](screenshots/snyk_wf.jpg)
+Артефакты отчетов:  
+![artifacts.png](screenshots/artifacts.png)  
 
-Артефакты отчетов:
-![artifacts.png](screenshots/artifacts.png)
-
-Сгенерированный отчет SpotBugs:
-![img_1.png](img_1.png)
+Сгенерированный отчет SpotBugs:  
+![img_1.png](img_1.png)  
 
 Сгенерированный отчет Snyk:
 ![img_2.png](img_2.png)
