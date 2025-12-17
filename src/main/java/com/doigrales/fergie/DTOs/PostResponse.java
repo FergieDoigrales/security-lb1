@@ -1,6 +1,7 @@
 package com.doigrales.fergie.DTOs;
 
 
+import com.doigrales.fergie.controllers.PostController;
 import com.doigrales.fergie.models.Post;
 import lombok.*;
 import org.apache.commons.text.StringEscapeUtils;

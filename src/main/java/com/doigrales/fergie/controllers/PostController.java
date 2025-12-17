@@ -1,11 +1,15 @@
 package com.doigrales.fergie.controllers;
 
 import com.doigrales.fergie.DTOs.PostCreateRequest;
+
 import com.doigrales.fergie.DTOs.PostResponse;
 import com.doigrales.fergie.models.Post;
+import com.doigrales.fergie.models.User;
 import com.doigrales.fergie.repositories.PostRepository;
 import com.doigrales.fergie.repositories.UserRepository;
+import jakarta.persistence.*;
 import jakarta.validation.Valid;
+import lombok.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.security.core.Authentication;
 
@@ -32,12 +36,12 @@ public class PostController {
         var user = userRepository.findByUsername(auth.getName())
                 .orElseThrow(() -> new IllegalStateException("Authenticated user not found"));
 
-        Post post = Post.builder()
-                .title(req.getTitle())
-                .content(req.getContent())
-                .createdAt(Instant.now())
-                .author(user)
-                .build();
+        Post post = new Post();
+        post.setTitle(req.getTitle());
+        post.setContent(req.getContent());
+        post.setCreatedAt(Instant.now());
+        post.setAuthor(user);
+        post.setAuthorUsername(user.getUsername());
 
         return PostResponse.from(postRepository.save(post));
     }

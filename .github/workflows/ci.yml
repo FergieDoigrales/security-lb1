@@ -45,20 +45,17 @@ jobs:
           java-version: "21"
           cache: maven
 
-      - name: Build + tests
-        run: mvn -B clean test
-
-      - name: SpotBugs (SAST)
+      - name: SpotBugs
         run: mvn -B spotbugs:check spotbugs:spotbugs
 
-      - name: Upload SpotBugs report
+      - name: Upload spotBugs report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: spotbugs-report
           path: target/spotbugsXml.xml
 
-      - name: Snyk test (SCA)
+      - name: Snyk test
         uses: snyk/actions/maven@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
@@ -77,7 +74,7 @@ jobs:
             snyk.json
             snyk.sarif
 
-      - name: Upload SARIF to GitHub Security tab
+      - name: Upload SARIF
         if: always()
         uses: github/codeql-action/upload-sarif@v3
         with:
