@@ -30,16 +30,13 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
         if (auth != null && auth.startsWith("Bearer ")) {
             String token = auth.substring(7);
-
             try {
                 String username = jwtService.validateAndGetSubject(token);
-
                 var userDetails = userDetailsService.loadUserByUsername(username);
                 var authentication = new UsernamePasswordAuthenticationToken(
                         userDetails, null, userDetails.getAuthorities()
                 );
                 SecurityContextHolder.getContext().setAuthentication(authentication);
-
             } catch (JwtException | IllegalArgumentException ex) {
                 SecurityContextHolder.clearContext();
                 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);

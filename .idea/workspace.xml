@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a2d5ee3-b40b-476e-a134-1e8d48083861" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/artifacts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/snyk_wf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/spotbugs.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/xss.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doigrales/fergie/DTOs/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/controllers/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/models/Post$PostBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/models/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/models/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/security/JwtAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/${project.build.directory}/classes/com/doigrales/fergie/security/JwtAuthFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/doigrales/fergie/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doigrales/fergie/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/doigrales/fergie/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doigrales/fergie/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/doigrales/fergie/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doigrales/fergie/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/doigrales/fergie/security/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doigrales/fergie/security/JwtAuthFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,13 +71,21 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/fergie/Desktop/fergie",
+    "last_opened_file_path": "C:/Users/fergie/Desktop/fergie/screenshots",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fergie\Desktop\fergie\screenshots" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fergie\Desktop\fergie\screenshots" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7a2d5ee3-b40b-476e-a134-1e8d48083861" name="Changes" comment="" />
