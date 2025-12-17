@@ -1,5 +1,6 @@
 package com.doigrales.fergie.security;
 
+import io.jsonwebtoken.JwtException;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -39,9 +40,9 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                 );
                 SecurityContextHolder.getContext().setAuthentication(authentication);
 
-            } catch (Exception e) {
+            } catch (JwtException | IllegalArgumentException ex) {
+                SecurityContextHolder.clearContext();
                 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                return;
             }
         }
 

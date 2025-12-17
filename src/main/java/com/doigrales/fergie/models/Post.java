@@ -2,6 +2,7 @@ package com.doigrales.fergie.models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import java.time.Instant;
 
@@ -27,6 +28,10 @@ public class Post {
     @Column(nullable = false)
     private Instant createdAt;
 
+    @SuppressFBWarnings(
+            value = {"EI_EXPOSE_REP", "EI_EXPOSE_REP2"},
+            justification = "JPA relationship; entities are not exposed directly (DTO used)"
+    )
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id", nullable = false)
     private User author;
